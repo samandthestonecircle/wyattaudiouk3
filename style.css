@@ -452,6 +452,9 @@ to {filter: opacity(0.5);}
 
     z-index: 10;
 
+   display: flex;
+    justify-content: center;
+    align-items: center;
    
 }
 
@@ -878,4 +881,5 @@ footer {
     color: var(--black);
     cursor: pointer;
 }
+
 
