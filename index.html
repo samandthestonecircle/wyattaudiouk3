@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wyatt Audio UK</title>
+    <meta name="description" content="Guitar Technician based in Brighton, UK">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="wyattaudiouk-favicon.webp">
+    <script src="script.js" defer></script>
+    <script src="input-knobs.js" defer></script>
+</head>
+<body>
+      
+<div id="landing-page">
+
+    
+
+    <div id="burger-div" onclick="showMenu()">
+        <div class="burger-line"></div>
+        <div class="burger-line"></div>
+        <div class="burger-line"></div>
+    </div>
+
+    <div id="menu">
+
+        <nav id="nav-panel">
+            <a class="nav-item" href="#landing-page" onclick="showMenu()"><h1>H O M E</h1></a>
+            <a class="nav-item" href="#card-container" onclick="showMenu()"><h1>S E R V I C E S</h1></a>
+            <a class="nav-item" href="#reviews-section" onclick="showMenu()"><h1>R E V I E W S</h1></a>
+            <a class="nav-item" href="#contact-bookmark" onclick="showMenu()"><h1>C O N T A C T</h1></a>
+        </nav>
+
+    </div>
+
+
+    <div id="social-bar">
+        <div>
+            <a href="https://www.instagram.com/wyattaudiouk/" aria-label="Visit Wyatt Audio UK on Instagram" target="_blank"><img class="social-icon" src="instagram.webp" alt="instagram handle"></a> 
+        </div>
+        <div>
+            <a href="mailto:connorwyatt98@gmail.com" aria-label="Send an email to Wyatt Audio UK"><img class="social-icon" src="mail.webp" alt="email address"></a> 
+        </div>
+        <div>
+            <a href="tel: +44 (0) 7379 357 645" aria-label="Phonecall Wyatt Audio UK"><img class="social-icon" src="phone.webp" alt="phone number"></a>
+        </div>
+        
+    </div>
+    
+    <video autoplay muted loop id="showreel">
+        <source src="Wyatt Audio Showreel_nologo.mp4" type="video/mp4">
+    </video>    
+
+    <img id="mobile-background" alt="background" src="circuit_board-fade54logo.webp">
+    
+    <img id="logo" alt="logo" src="Wyatt Audio UK.webp">
+
+</div>
+
+
+<div id="card-container">
+
+    <!-- SERVICE SETUP -->
+
+    <div id="service-setup" class="card-item" onmouseenter="tileEnter('service-setup-title','service-setup-text','setup-img')" onmouseleave="tileLeave('service-setup-title','service-setup-text','setup-img')" >
+
+        <div id="service-setup-title" class="card-title">
+            <h2>SERVICE & <br>SETUP</h2> 
+        </div>
+
+        <div id="service-setup-text" class="card-text">
+            <p1>Does your instrument feel or look like it could do with some love? A service could be due!<br>
+            </p1>
+            <button class="service-button" onclick="openModal('setup-modal')">[ Learn More ]</button>
+        </div>
+
+        <img class="card-img" id="setup-img" alt="setup photo" src="setup.webp">
+        
+    </div>
+
+    <div id="setup-modal" class="modal">
+  
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('setup-modal')">&times;</span>
+            <h1 class="modal-h">SERVICE &nbsp; & &nbsp; SETUP</h1><br>
+            <p1>This
+includes:<br><br>
+● A deep clean of the fretboard, body and hardware<br><br>
+● A restring with your desired set<br><br>
+● Truss rod adjustment to the ideal relief<br><br>
+● Action adjustment to your desired height<br><br>
+● Intonation adjustment for tuning stability up the neck<br><br>
+● Electronic clean and check over<br><br><br></p1>
+
+<h1 style="color: var(--action);">Prices £50+</h1>
+
+        </div>
+
+    </div>
+
+ <!-- ELECTRONIC REPAIRS -->
+
+    <div id="electronic-repairs" class="card-item" onmouseenter="tileEnter('electronic-repairs-title','electronic-repairs-text','electronic-img')" onmouseleave="tileLeave('electronic-repairs-title','electronic-repairs-text','electronic-img')" >
+
+         <div id="electronic-repairs-title" class="card-title">
+            <h2>ELECTRONIC<br>REPAIRS</h2>
+        </div>
+        
+
+        <div id="electronic-repairs-text" class="card-text">
+            <p1>Hearing a weird crackle or hum? Intermittent or lack of signal? Or maybe you want a different sound? Electronics are your solution!<br>
+            </p1>
+            <button class="service-button" onclick="openModal('electronic-modal')">[ Learn More ]</button>
+        </div>
+
+        <img class="card-img" id="electronic-img" alt="electronic repair photo" src="electronics.webp">
+
+    </div>
+
+    <div id="electronic-modal" class="modal">
+  
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('electronic-modal')">&times;</span>
+
+            <h1 class="modal-h">ELECTRONIC &nbsp; REPAIRS</h1><br>
+            <p1>I can replace the following:<br><br>
+● Output jacks<br><br>
+● Volume or Tone Potentiometers<br><br>
+● Pickup and Various Circuit Switches<br><br>
+● Pickups<br><br>
+● Preamps<br><br>
+● Full Wiring Harness<br><br><br></p1>
+
+<h1 style="color: var(--action);">Prices £30+</h1>
+
+        </div>
+
+    </div>
+
+    <div id="hardware-repairs" class="card-item" onmouseenter="tileEnter('hardware-repairs-title','hardware-repairs-text','hardware-img')" onmouseleave="tileLeave('hardware-repairs-title','hardware-repairs-text','hardware-img')" >
+
+        <div id="hardware-repairs-title" class="card-title">
+            <h2>HARDWARE<br>REPAIRS</h2>
+        </div>
+
+
+        <div id="hardware-repairs-text" class="card-text">
+            <p1>Something snapped? Turning? Or not turning enough? Might be time to look at replacing some parts!<br>
+            </p1>
+            <button class="service-button" onclick="openModal('hardware-modal')">[ Learn More ]</button>
+        </div>
+
+         <img class="card-img" id="hardware-img" alt="hardware photo" src="hardware.webp">
+
+       
+    </div>
+
+    <div id="hardware-modal" class="modal">
+  
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('hardware-modal')">&times;</span>
+
+           <h1 class="modal-h">HARDWARE &nbsp; REPAIRS</h1><br>
+            <p1>I can help with:<br><br>
+● A replacement nut with your desired material<br><br>
+● Swapping out broken tuning pegs<br><br>
+● A replacement saddle with your desired material<br><br>
+● Stripped or threaded strap buttons<br><br>
+● Replacing bridge parts<br><br>
+
+● Upgrading current hardware<br><br><br>
+</p1>
+<h1 style="color: var(--action);">Prices £20+</h1>
+
+        </div>
+
+    </div>
+
+    <div id="fretwork" class="card-item" onmouseenter="tileEnter('fretwork-title','fretwork-text','fretwork-img')" onmouseleave="tileLeave('fretwork-title','fretwork-text','fretwork-img')" >
+
+        <div id="fretwork-title" class="card-title">
+            <h2>FRETWORK</h2>
+        </div>
+
+
+        <div id="fretwork-text" class="card-text">
+            <p1>We all love a low action, but dealing with divots, buzz and choking isn’t worth it! If you’re losing your note, your frets might need some work!<br>
+            </p1>
+            <button class="service-button" onclick="openModal('fretwork-modal')">[ Learn More ]</button>
+        </div>
+
+        <img class="card-img" id="fretwork-img" alt="fretwork photo" src="fretwork.webp">
+        
+    </div>
+
+     <div id="fretwork-modal" class="modal">
+  
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('fretwork-modal')">&times;</span>
+
+            <h1 class="modal-h">FRETWORK</h1><br>
+            <p1>Your frets might need the following:<br><br>
+● Levelling<br><br>
+● Recrowning<br><br>
+● End Dressing<br><br>
+● Polishing<br><br><br></p1>
+
+<h1 style="color: var(--action);">Prices £70+</h1>
+
+        </div>
+
+    </div>
+
+    <div id="modifications" class="card-item" onmouseenter="tileEnter('modifications-title','modifications-text','modifications-img')" onmouseleave="tileLeave('modifications-title','modifications-text','modifications-img')" >
+
+        <div id="modifications-title" class="card-title">
+            <h2>MODIFICATIONS</h2>
+        </div>
+
+
+        <div id="modifications-text" class="card-text">
+            <p1>Sometimes, stock just isn’t enough. If you want more versatility, sustain, or simply more noise at your fingertips, mods are the way forward!<br>
+            </p1>
+            <button class="service-button" onclick="openModal('modifications-modal')">[ Learn More ]</button>
+        </div>
+
+        <img class="card-img" id="modifications-img" alt="modifications photo" src="modifications.webp">
+        
+    </div>
+
+    <div id="modifications-modal" class="modal">
+  
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modifications-modal')">&times;</span>
+
+             <h1>MODIFICATIONS</h1><br>
+            <p1>Here’s a few examples:<br><br>
+● Coil-Split<br><br>
+● Out-of-Phase<br><br>
+● Rhythm Circuit<br><br>
+● Killswitch<br><br>
+● Straight to output jack<br><br>
+● Vintage Wiring<br><br><br></p1>
+
+<h1 style="color: var(--action);">Prices £30+</h1>
+
+        </div>
+
+    </div>
+
+    <div id="more" class="card-item" onmouseenter="tileEnter('more-title','more-text','more-img')" onmouseleave="tileLeave('more-title','more-text','more-img')">
+
+        <div id="more-title" class="card-title">
+            <h2>M O R E</h2>
+        </div>
+
+
+        <div id="more-text" class="card-text">
+            <p1>Something else?<br>
+            </p1>
+            <a href="#contact-bookmark"><button class="service-button" >[ Get In Touch ]</button></a>
+        </div>
+
+        <img class="card-img" id="more-img" alt="more services photo" src="more.webp">
+        
+    </div>
+
+
+</div>
+
+
+<!-- REVIEWS SECTION -->
+
+<div id="reviews-section">
+
+    <div id="reviews-container-desktop">
+
+        <div class="review">
+            
+            
+            <p1>"I have taken multiple guitars for a variety of work to Wyatt and I can’t recommend the service any higher! With such a great depth of knowledge and experience, work is carried out to an amazing standard! Wyatt is incredibly friendly and always willing to offer support and help!"<br><br></p1>
+
+            <h1>- Kali Lloyd </h1>
+
+            <img class="five-stars" alt="five stars" src="5stars-green.webp">
+            
+        </div>
+
+        <div class="review">
+
+            
+            
+            <p1>"I've taken multiple guitars to Wyatt 4 or 5 times now for guitar setups and can honestly say that he does an excellent job. For a fair price, Wyatt will give you the perfect setup for your guitar and explains clearly what he has done to get it that way..."<br><br></p1>
+
+            <h1>- Luke Evans  </h1>
+
+            <img class="five-stars" alt="five stars" src="5stars-green.webp">
+            
+        </div>
+
+        <div class="review">
+
+            
+
+             
+             <p1>"Wyatt is an absolute lifesaver for any guitarist! I’ve been taking my guitars to him for several years now and he is always quick to recognise any issues I’m having, explains everything clearly, and gives a fair quote every time..."<br><br></p1>
+
+            <h1>- Tyler McIvor </h1>
+
+            <img class="five-stars" alt="five stars" src="5stars-green.webp">
+            
+
+        </div>
+
+       
+        <div class="review">
+
+             
+
+             <p1>"Guitar wizard! Wyatt has set up all of my basses and they play like butter. He's even brought back to life an old bass I had rotting away in an attic for 15 years. Highly recommended."<br><br></p1>
+
+            <h1>- Martin Dodd </h1>
+
+            <img class="five-stars" alt="five stars" src="5stars-green.webp">
+            
+
+    
+        </div>
+
+        <div class="review">
+
+            
+            
+            <p1>"Best Guitar tech I know. Connor is very skilled and reliable. He's been servicing, customising, and upgrading my guitars for years. Can't recommend him enough."<br><br></p1>
+
+            <h1>- Ash Purchese  </h1>
+
+            <img class="five-stars" alt="five stars" src="5stars-green.webp">
+            
+        </div>
+
+        
+
+        <div class="review">
+            
+           
+
+            <p1>"Thanks so much for great set up and spring clean on my 335 - playing better than ever. Will definitely use you again 5* service"<br><br></p1>
+
+            <h1>- Richard </h1>
+
+            <img class="five-stars" alt="five stars" src="5stars-green.webp">
+           
+        </div>
+  
+    </div>
+
+    <div id="google-review-container-desktop">
+        <a href="https://www.google.com/search?sca_esv=d453f7813e42fa49&sxsrf=AE3TifNU_kib5SK7Pj8FpTCVNy_Wx4G-LQ:1755474411502&si=AMgyJEtREmoPL4P1I5IDCfuA8gybfVI2d5Uj7QMwYCZHKDZ-E2O4GN5r2Zilj6Y7HI6cwKf4KRTCtshe12gGpc-6X1KvuqnzlNaUcq-cHj8kxOfzBv_UpxNoYXjj3XJ55KZVEXjv_Jx6&q=Wyatt+Audio+UK+Reviews&sa=X&ved=2ahUKEwjd1tblg5OPAxUNUEEAHe4WK3QQ0bkNegQILRAD&biw=1536&bih=695&dpr=1.25" target="_blank">
+        <div id="leave-a-review">
+            <p1 id="leave-a-review-text">[ Click to Leave a Google Review &nbsp;</p1><img alt="google logo" src="https://fonts.gstatic.com/s/i/productlogos/googleg/v6/24px.svg"><p1> &nbsp;]</p1>
+        </div>
+        </a>
+
+    </div>
+
+</div>
+
+<!-- REVIEWS SECTION MOBILE -->
+
+<div id="reviews-section">
+
+    <div id="reviews-container">
+
+        <div class="review">
+            
+            
+            <p1>"I have taken multiple guitars for a variety of work to Wyatt and I can’t recommend the service any higher! With such a great depth of knowledge and experience, work is carried out to an amazing standard! Wyatt is incredibly friendly and always willing to offer support and help!"<br><br></p1>
+
+            <h1>- Kali Lloyd </h1>
+
+            <img class="five-stars" alt="five stars" src="5stars-green.webp">
+           
+        </div>
+
+        <div class="review">
+
+            
+            
+            <p1>"I've taken multiple guitars to Wyatt 4 or 5 times now for guitar setups and can honestly say that he does an excellent job. For a fair price, Wyatt will give you the perfect setup for your guitar and explains clearly what he has done to get it that way..."<br><br></p1>
+
+            <h1>- Luke Evans  </h1>
+
+            <img class="five-stars" alt="five stars" src="5stars-green.webp">
+            
+        </div>
+
+        <div class="review">
+
+            
+
+             
+             <p1>"Wyatt is an absolute lifesaver for any guitarist! I’ve been taking my guitars to him for several years now and he is always quick to recognise any issues I’m having, explains everything clearly, and gives a fair quote every time..."<br><br></p1>
+
+            <h1>- Tyler McIvor </h1>
+
+            <img class="five-stars" alt="five stars" src="5stars-green.webp">
+            
+
+        </div>
+
+        
+        <div class="review">
+
+             
+
+             <p1>"Guitar wizard! Wyatt has set up all of my basses and they play like butter. He's even brought back to life an old bass I had rotting away in an attic for 15 years. Highly recommended."<br><br></p1>
+
+            <h1>- Martin Dodd </h1>
+
+            <img class="five-stars" alt="five stars" src="5stars-green.webp">
+            
+
+    
+        </div>
+
+        <div class="review">
+
+            
+            
+            <p1>"Best Guitar tech I know. Connor is very skilled and reliable. He's been servicing, customising, and upgrading my guitars for years. Can't recommend him enough."<br><br></p1>
+
+            <h1>- Ash Purchese  </h1>
+
+            <img class="five-stars" alt="five stars" src="5stars-green.webp">
+           
+        </div>
+
+        
+
+        <div class="review">
+            
+           
+
+            <p1>"Thanks so much for great set up and spring clean on my 335 - playing better than ever. Will definitely use you again 5* service"<br><br></p1>
+
+            <h1>- Richard </h1>
+
+            <img class="five-stars" alt="five stars" src="5stars-green.webp">
+            
+        </div>
+    
+
+    </div>
+
+    <div id="google-review-container">
+        <a href="https://www.google.com/search?sca_esv=d453f7813e42fa49&sxsrf=AE3TifNU_kib5SK7Pj8FpTCVNy_Wx4G-LQ:1755474411502&si=AMgyJEtREmoPL4P1I5IDCfuA8gybfVI2d5Uj7QMwYCZHKDZ-E2O4GN5r2Zilj6Y7HI6cwKf4KRTCtshe12gGpc-6X1KvuqnzlNaUcq-cHj8kxOfzBv_UpxNoYXjj3XJ55KZVEXjv_Jx6&q=Wyatt+Audio+UK+Reviews&sa=X&ved=2ahUKEwjd1tblg5OPAxUNUEEAHe4WK3QQ0bkNegQILRAD&biw=1536&bih=695&dpr=1.25" target="_blank">
+        <div id="leave-a-review">
+            <p1 id="leave-a-review-text">[ Click to Leave a Google Review &nbsp;</p1><img alt="google logo" src="https://fonts.gstatic.com/s/i/productlogos/googleg/v6/24px.svg"><p1> &nbsp;]</p1>
+        </div>
+        </a>
+
+    </div>
+
+
+</div>
+
+<!-- PEDAL CONTACT SECTION -->
+
+<span id="contact-bookmark"></span>
+
+<div class="mobile-pedal-section">
+    <!-- display showing info -->
+
+    <div id="mobile-pedal-display-container">
+
+        <div id="mobile-pedal-display-containerheader"></div>
+
+        <!-- <div id="close-pedal-display" onclick="closePedalDisplay()">☒</div> -->
+
+        <div class="display-mobile">
+        <div id="phone-display-mobile">
+            <a href="tel: +44 (0) 7379 357 645" aria-label="Phonecall Wyatt Audio UK"><p3>07379357645</p3></a>
+        </div>
+        </div>
+
+        <div class="display-mobile">
+            <div id="email-display-mobile">
+                <a href="mailto:connorwyatt98@gmail.com" aria-label="Send an email to Wyatt Audio UK"><p3>connorwyatt98@gmail.com</p3></a>
+            </div>
+        </div>
+
+        <div class="display-mobile">
+            <div id="insta-display-mobile">
+                 <a href="https://www.instagram.com/wyattaudiouk/" target="_blank" aria-label="Visit Wyatt Audio UK on Instagram"><p3>@wyattaudiouk</p3></a>
+            </div>
+        </div>
+
+
+    </div>
+
+</div>
+
+<div class="pedal-section" id="pedal-section">
+
+    <div class="pedal-container" id="pedal-container">
+
+        <div id="pedal-containerheader"></div>
+
+        <img src="muff-scratched.webp" alt="effects pedal graphic" id="pedal-canvas">
+    
+
+        <input type="range" class="input-knob" aria-label="phone-number-input-knob" data-diameter="120" min="0" max="11" step="1" value="0" data-src="knob2.webp" id="knob1"  oninput="pedalOperation()"/>
+
+        <input type="range" class="input-knob" aria-label="email-address-input-knob" data-diameter="120" min="0" max="23" step="1" value="0" data-src="knob2.webp" id="knob2" oninput="pedalOperation()"/>
+
+        <input type="range" class="input-knob" aria-label="instagram-handle-input-knob" data-diameter="120" min="0" max="13" step="1" value="0" data-src="knob2.webp" id="knob3" oninput="pedalOperation()"/>    
+
+
+        <button id="footswitch" aria-label="Turn on pedal" onclick="lightToggle()"></button>
+
+        <div id="light"></div>
+
+       <div class="tooltip">
+            <img class="question-mark" alt="help symbol" src="question-mark.webp">
+            <span class="tooltiptext"><p1>Click the footswitch to turn on pedal and display. <br>
+            Turn up the knobs to reveal information.</p1></span>
+    </div>
+
+    </div>
+
+
+    <div id="pedal-display-container">
+
+        <div id="pedal-display-containerheader"></div>
+
+        <div class="display">
+        
+            <p3 id="phone-display"></p3>
+        
+        </div>
+
+        <div class="display">
+            <p3 id="email-display"></p3>
+        </div>
+
+        <div class="display">
+            <p3 id="insta-display"></p3>
+        </div>
+
+    </div>
+
+</div>
+
+<footer>
+
+    <p1 id="footer">Website built by <a href="" aria-label="Visit Velknd Studio web designers website"><span id=highlight>Velknd.Studio</span></a></p1>
+
+</footer>
+
+</body>
+</html>
+
+<!-- website by Sam (velkndstudio.com) -->
